@@ -280,7 +280,7 @@ namespace RobDriver.Modules
 
                 if (damageInfo.HasModdedDamageType(MissileShot))
                 {
-                    if (Util.CheckRoll(10f * damageInfo.procCoefficient, attackerBody.master))
+                    if (Util.CheckRoll(25f * damageInfo.procCoefficient, attackerBody.master))
                     {
                         float damageCoefficient = 1f + attackerBody.inventory.GetItemCount(RoR2Content.Items.Missile);
                         float missileDamage = Util.OnHitProcDamage(damageInfo.damage, attackerBody.damage, damageCoefficient);
@@ -441,7 +441,7 @@ namespace RobDriver.Modules
                 if (damageInfo.HasModdedDamageType(FireballRounds))
                 {
                     //Vector3 vector3 = (inputBank ? inputBank.aimDirection : victim.transform.forward);
-                    if (Util.CheckRoll(10f * damageInfo.procCoefficient, attackerBody.master))
+                    if (Util.CheckRoll(25f * damageInfo.procCoefficient, attackerBody.master))
                     {
                         Vector3 origin = (attackerBody.characterMotor ? (victim.transform.position + Vector3.up * (attackerBody.characterMotor.capsuleHeight * 0.5f + 2f)) : (victim.transform.position + Vector3.up * 2f));
                         EffectData effectData = new EffectData
@@ -493,25 +493,28 @@ namespace RobDriver.Modules
                 
                 if (damageInfo.HasModdedDamageType(VoidLightning))
                 {
-                    VoidLightningOrb voidLightningOrb = new VoidLightningOrb
+                    if (Util.CheckRoll(25f * damageInfo.procCoefficient, attackerBody.master))
                     {
-                        origin = damageInfo.position,
-                        damageValue = Util.OnHitProcDamage(damageInfo.damage, attackerBody.damage, 0.6f),
-                        isCrit = damageInfo.crit,
-                        totalStrikes = 2 + 3 * attackerBody.inventory.GetItemCount(DLC1Content.Items.ChainLightningVoid),
-                        teamIndex = attackerTeamIndex,
-                        attacker = damageInfo.attacker,
-                        procChainMask = damageInfo.procChainMask,
-                        procCoefficient = 0.2f,
-                        damageColorIndex = DamageColorIndex.Void,
-                        secondsPerStrike = 0.1f
-                    };
-                    voidLightningOrb.procChainMask.AddProc(ProcType.ChainLightning);
+                        VoidLightningOrb voidLightningOrb = new VoidLightningOrb
+                        {
+                            origin = damageInfo.position,
+                            damageValue = Util.OnHitProcDamage(damageInfo.damage, attackerBody.damage, 0.6f),
+                            isCrit = damageInfo.crit,
+                            totalStrikes = 2 + 3 * attackerBody.inventory.GetItemCount(DLC1Content.Items.ChainLightningVoid),
+                            teamIndex = attackerTeamIndex,
+                            attacker = damageInfo.attacker,
+                            procChainMask = damageInfo.procChainMask,
+                            procCoefficient = 0.2f,
+                            damageColorIndex = DamageColorIndex.Void,
+                            secondsPerStrike = 0.1f
+                        };
+                        voidLightningOrb.procChainMask.AddProc(ProcType.ChainLightning);
 
-                    if (victimBody && victimBody.mainHurtBox)
-                    {
-                        voidLightningOrb.target = victimBody.mainHurtBox;
-                        OrbManager.instance.AddOrb(voidLightningOrb);
+                        if (victimBody && victimBody.mainHurtBox)
+                        {
+                            voidLightningOrb.target = victimBody.mainHurtBox;
+                            OrbManager.instance.AddOrb(voidLightningOrb);
+                        }
                     }
                 }
                 
