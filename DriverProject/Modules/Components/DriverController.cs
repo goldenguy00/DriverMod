@@ -603,7 +603,8 @@ namespace RobDriver.Modules.Components
         
         public void FinishReload()
         {
-            if (this.needReload) this.skillLocator.primary.UnsetSkillOverride(this, RobDriver.Modules.Survivors.Driver.pistolReloadSkillDef, GenericSkill.SkillOverridePriority.Upgrade);
+            this.skillLocator.primary.UnsetSkillOverride(this, RobDriver.Modules.Survivors.Driver.pistolReloadSkillDef, GenericSkill.SkillOverridePriority.Upgrade);
+            needReload = false;
 
             if(this.passive.isPistolOnly)
             {
