@@ -76,7 +76,7 @@ namespace RobDriver.Modules.Components
 
         private DriverWeaponDef lastWeaponDef;
         private WeaponNotificationQueue notificationQueue;
-        private bool needReload;
+        private bool needReload = false;
 
         public float ammo
         {
@@ -309,12 +309,12 @@ namespace RobDriver.Modules.Components
             EffectManager.SpawnEffect(Modules.Assets.upgradeEffectPrefab, effectData, false);
 
             EffectManager.SpawnEffect(Addressables.LoadAssetAsync<GameObject>("RoR2/Base/LunarGolem/LunarGolemTwinShotExplosion.prefab").WaitForCompletion(),
-new EffectData
-{
-origin = this.childLocator.FindChild("Pistol").position,
-rotation = Quaternion.identity,
-scale = 1f
-}, false);
+                new EffectData
+                {
+                    origin = this.childLocator.FindChild("Pistol").position,
+                    rotation = Quaternion.identity,
+                    scale = 1f
+                }, false);
         }
 
         private void UpgradeToVoid()
@@ -334,12 +334,12 @@ scale = 1f
             EffectManager.SpawnEffect(Modules.Assets.upgradeEffectPrefab, effectData, false);
 
             EffectManager.SpawnEffect(Addressables.LoadAssetAsync<GameObject>("RoR2/DLC1/VoidSurvivor/VoidSurvivorMegaBlasterExplosion.prefab").WaitForCompletion(),
-new EffectData
-{
-    origin = this.childLocator.FindChild("Pistol").position,
-    rotation = Quaternion.identity,
-    scale = 1f
-}, false);
+                new EffectData
+                {
+                    origin = this.childLocator.FindChild("Pistol").position,
+                    rotation = Quaternion.identity,
+                    scale = 1f
+                }, false);
         }
 
         private void Inventory_onItemAddedClient(ItemIndex itemIndex)
@@ -447,42 +447,42 @@ new EffectData
 
         private void SetBulletAmmo(bool isPistol, float ammo = -1f)
         {
-            float num = basePistolAmmo;
+            float shotCount = basePistolAmmo;
 
             if (!isPistol)
             {
-                num = this.weaponDef.shotCount;
+                shotCount = this.weaponDef.shotCount;
 
                 if (Modules.Config.backupMagExtendDuration.Value)
                 {
                     if (this.characterBody && this.characterBody.inventory)
                     {
-                        num += (0.5f * this.characterBody.inventory.GetItemCount(RoR2Content.Items.SecondarySkillMagazine));
+                        shotCount += (0.5f * this.characterBody.inventory.GetItemCount(RoR2Content.Items.SecondarySkillMagazine));
                     }
                 }
 
-                if (Modules.Config.GetWeaponConfig(this.weaponDef)) num = Modules.Config.GetWeaponConfigShotCount(this.weaponDef);
+                if (Modules.Config.GetWeaponConfig(this.weaponDef)) shotCount = Modules.Config.GetWeaponConfigShotCount(this.weaponDef);
 
-                if (this.weaponDef.tier == DriverWeaponTier.Common) num = 0f;
-                if (this.weaponDef.shotCount == 0) num = 0f;
+                if (this.weaponDef.tier == DriverWeaponTier.Common) shotCount = 0f;
+                if (this.weaponDef.shotCount == 0) shotCount = 0f;
 
-                this.weaponTimer = num;
+                this.weaponTimer = shotCount;
                 if (ammo != -1f) this.weaponTimer = ammo;
                 this.maxWeaponTimer = this.weaponTimer;
             }
             else
             {
-                if (this.characterBody.attackSpeed > 1) num += Mathf.Round(this.characterBody.attackSpeed - 1) * 5;
+                if (this.characterBody.attackSpeed > 1) shotCount += Mathf.Round((this.characterBody.attackSpeed - 1) * 5);
 
                 if (Modules.Config.backupMagExtendDuration.Value)
                 {
                     if (this.characterBody && this.characterBody.inventory)
                     {
-                        num += (0.5f * this.characterBody.inventory.GetItemCount(RoR2Content.Items.SecondarySkillMagazine));
+                        shotCount += (0.5f * this.characterBody.inventory.GetItemCount(RoR2Content.Items.SecondarySkillMagazine));
                     }
                 }
-                this.weaponTimer = num;
-                this.maxWeaponTimer = num;
+                this.weaponTimer = shotCount;
+                this.maxWeaponTimer = shotCount;
             }
         }
 
@@ -514,15 +514,13 @@ new EffectData
                     }
                     this.bulletDamageType = DamageType.Generic;
                     this.moddedBulletType = DamageTypes.Generic;
-                    if (!this.needReload && this.weaponDef.name == "ROB_DRIVER_PISTOL_NAME")
+                    if (!this.needReload && DriverWeaponCatalog.IsWeaponPistol(weaponDef))
                     {
-                        //Log.Debug("Pistol Reload Started");
                         this.needReload = true;
                         this.skillLocator.primary.SetSkillOverride(this, RobDriver.Modules.Survivors.Driver.pistolReloadSkillDef, GenericSkill.SkillOverridePriority.Upgrade);
                     }
                     else if(!this.needReload)
                     {
-                        ////Log.debug("Not Pistol Reload Started");
                         this.needReload = true;
                         this.ReturnToDefaultWeapon();
                     }
@@ -584,10 +582,12 @@ new EffectData
         private void ReturnToDefaultWeapon()
         {
             this.DiscardWeapon();
-            if (this.hasPickedUpHammer) this.PickUpWeapon(DriverWeaponCatalog.LunarHammer);
+            if (this.hasPickedUpHammer)
+            {
+                this.PickUpWeapon(DriverWeaponCatalog.LunarHammer);
+            }
             else
             {
-                //Log.debug("PickUpWeapon ran with " + this.defaultWeaponDef.name);
                 this.PickUpWeapon(this.defaultWeaponDef);
             }
         }
@@ -808,16 +808,20 @@ new EffectData
                 }
             }
 
-            if (this.weaponDef.tier == DriverWeaponTier.Common) duration = 0f;
-            if (this.weaponDef.shotCount == 0) duration = 0f;
+            if (DriverWeaponCatalog.IsWeaponPistol(weaponDef) || this.weaponDef.shotCount == 0) duration = 0f;
 
             if (this.passive.isPistolOnly) duration = 26f;
 
-            if(this.passive.isBullets || this.passive.isRyan && this.weaponDef.nameToken == "ROB_DRIVER_PISTOL_NAME") duration = basePistolAmmo;
+            if (this.passive.isBullets || (this.passive.isRyan && DriverWeaponCatalog.IsWeaponPistol(weaponDef))) duration = basePistolAmmo;
 
-            this.weaponTimer = duration;//this.weaponDef.baseDuration;
-
-            if (ammo != -1f) this.weaponTimer = ammo;
+            if (ammo != -1f)
+            {
+                this.weaponTimer = ammo;
+            }
+            else
+            {
+                this.weaponTimer = duration;
+            }
 
             this.maxWeaponTimer = weaponTimer;
 

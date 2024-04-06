@@ -71,7 +71,7 @@ namespace RobDriver.Modules.Components
 
 		public CharacterMasterNotificationQueue.NotificationInfo GetCurrentNotification()
 		{
-			return this.notification.notification;
+			return this.notification?.notification;
 		}
 	}
 }

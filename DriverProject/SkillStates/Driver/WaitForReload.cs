@@ -6,7 +6,8 @@
         {
             base.FixedUpdate();
 
-            if (base.fixedAge >= 2f && base.isAuthority)
+            // i love nesting if statements instead of writing proper decision trees :)
+            if (base.isAuthority)
             {
                 if (this.iDrive.weaponTimer == this.iDrive.maxWeaponTimer || this.iDrive.passive.isBullets || this.iDrive.passive.isRyan)
                 {
@@ -14,16 +15,19 @@
                     return;
                 }
 
-                if (this.iDrive.weaponTimer <= 0f)
+                if (base.fixedAge >= 2f)
                 {
-                    this.outer.SetNextState(new ReloadPistol());
-                }
-                else
-                {
-                    this.outer.SetNextState(new ReloadPistol
+                    if (this.iDrive.weaponTimer <= 0f)
                     {
-                        interruptPriority = EntityStates.InterruptPriority.Any
-                    });
+                        this.outer.SetNextState(new ReloadPistol());
+                    }
+                    else
+                    {
+                        this.outer.SetNextState(new ReloadPistol
+                        {
+                            interruptPriority = EntityStates.InterruptPriority.Any
+                        });
+                    }
                 }
             }
         }

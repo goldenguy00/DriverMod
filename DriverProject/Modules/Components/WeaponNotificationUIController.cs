@@ -62,7 +62,7 @@ namespace RobDriver.Modules.Components
 		private void ShowCurrentNotification(WeaponNotificationQueue notificationQueue)
 		{
 			this.DestroyCurrentNotification();
-			CharacterMasterNotificationQueue.NotificationInfo notificationInfo = notificationQueue.GetCurrentNotification();
+			CharacterMasterNotificationQueue.NotificationInfo notificationInfo = notificationQueue?.GetCurrentNotification();
 			if (notificationInfo != null)
 			{
 				this.SetUpNotification(notificationInfo);

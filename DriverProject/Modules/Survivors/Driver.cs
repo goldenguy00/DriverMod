@@ -721,44 +721,46 @@ namespace RobDriver.Modules.Survivors
 
             #region Primary
             Modules.Skills.AddPrimarySkills(prefab,
-                Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Shoot)), "Weapon", prefix + "_DRIVER_BODY_PRIMARY_PISTOL_NAME", prefix + "_DRIVER_BODY_PRIMARY_PISTOL_DESCRIPTION", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false));//,
-                                                                                                                                                                                                                                                                                                                           //Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Revolver.Shoot)), "Weapon", prefix + "_DRIVER_BODY_PRIMARY_PISTOL_NAME", prefix + "_DRIVER_BODY_PRIMARY_PISTOL_DESCRIPTION", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false));
-
+                Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Shoot)),
+                "Weapon", 
+                prefix + "_DRIVER_BODY_PRIMARY_PISTOL_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_PISTOL_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false));
 
             Driver.goldenGunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-    new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.GoldenGun.Shoot)),
-    "Weapon",
-    prefix + "_DRIVER_BODY_PRIMARY_GOLDENGUN_NAME",
-    prefix + "_DRIVER_BODY_PRIMARY_GOLDENGUN_DESCRIPTION",
-    Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texGoldenGunIcon"), false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.GoldenGun.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_GOLDENGUN_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_GOLDENGUN_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texGoldenGunIcon"), false);
 
             Driver.pyriteGunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.PyriteGun.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_PYRITE_PISTOL_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_PYRITE_PISTOL_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texGoldenGunIcon"), false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.PyriteGun.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_PYRITE_PISTOL_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_PYRITE_PISTOL_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texGoldenGunIcon"), false);
 
             Driver.beetleShieldPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.BeetleShield.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_PISTOL_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_PISTOL_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.BeetleShield.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_PISTOL_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_PISTOL_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
 
             Driver.lunarPistolPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.LunarPistol.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_LUNAR_PISTOL_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_LUNAR_PISTOL_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.LunarPistol.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_LUNAR_PISTOL_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_LUNAR_PISTOL_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
 
             Driver.voidPistolPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.VoidPistol.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_VOID_PISTOL_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_VOID_PISTOL_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.VoidPistol.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_VOID_PISTOL_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_VOID_PISTOL_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
 
             Driver.shotgunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
                 new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Shotgun.Shoot)),
@@ -777,12 +779,12 @@ Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
                 false);
 
             Driver.slugShotgunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-    new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.SlugShotgun.Shoot)),
-    "Weapon",
-    prefix + "_DRIVER_BODY_PRIMARY_SLUG_SHOTGUN_NAME",
-    prefix + "_DRIVER_BODY_PRIMARY_SLUG_SHOTGUN_DESCRIPTION",
-    Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texSlugShotgunIcon"),
-    false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.SlugShotgun.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_SLUG_SHOTGUN_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_SLUG_SHOTGUN_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texSlugShotgunIcon"),
+                false);
 
             Driver.machineGunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
                 new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.MachineGun.Shoot)),
@@ -793,20 +795,20 @@ Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
                 false);
 
             Driver.heavyMachineGunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-    new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.HeavyMachineGun.Shoot)),
-    "Weapon",
-    prefix + "_DRIVER_BODY_PRIMARY_HEAVY_MACHINEGUN_NAME",
-    prefix + "_DRIVER_BODY_PRIMARY_HEAVY_MACHINEGUN_DESCRIPTION",
-    Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texMachineGunIcon"),
-    false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.HeavyMachineGun.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_HEAVY_MACHINEGUN_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_HEAVY_MACHINEGUN_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texMachineGunIcon"),
+                false);
 
             Driver.bazookaPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-    new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Bazooka.Charge)),
-    "Weapon",
-    prefix + "_DRIVER_BODY_PRIMARY_BAZOOKA_NAME",
-    prefix + "_DRIVER_BODY_PRIMARY_BAZOOKA_DESCRIPTION",
-    Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texRocketLauncherIcon"),
-    false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Bazooka.Charge)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_BAZOOKA_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_BAZOOKA_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texRocketLauncherIcon"),
+                false);
 
             Driver.rocketLauncherPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
                 new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.RocketLauncher.Shoot)),
@@ -817,100 +819,100 @@ Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPistolIcon"), false);
                 false);
 
             Driver.behemothPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-    new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.RocketLauncher.Shoot)),
-    "Weapon",
-    prefix + "_DRIVER_BODY_PRIMARY_ROCKETLAUNCHER_NAME",
-    prefix + "_DRIVER_BODY_PRIMARY_ROCKETLAUNCHER_DESCRIPTION",
-    Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texRocketLauncherIcon"),
-    false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.RocketLauncher.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_ROCKETLAUNCHER_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_ROCKETLAUNCHER_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texRocketLauncherIcon"),
+                false);
 
             Driver.rocketLauncherAltPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-    new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.RocketLauncher.NerfedShoot)),
-    "Weapon",
-    prefix + "_DRIVER_BODY_PRIMARY_ROCKETLAUNCHER_ALT_NAME",
-    prefix + "_DRIVER_BODY_PRIMARY_ROCKETLAUNCHER_ALT_DESCRIPTION",
-    Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texRocketLauncherIcon"),
-    false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.RocketLauncher.NerfedShoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_ROCKETLAUNCHER_ALT_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_ROCKETLAUNCHER_ALT_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texRocketLauncherIcon"),
+                false);
 
             Driver.grenadeLauncherPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.GrenadeLauncher.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_GRENADELAUNCHER_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_GRENADELAUNCHER_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texRocketLauncherIcon"),
-false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.GrenadeLauncher.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_GRENADELAUNCHER_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_GRENADELAUNCHER_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texRocketLauncherIcon"),
+                false);
 
             Driver.armCannonPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.ArmCannon.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_ARMCANNON_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_ARMCANNON_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texArmCannonIcon"),
-false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.ArmCannon.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_ARMCANNON_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_ARMCANNON_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texArmCannonIcon"),
+                false);
 
             Driver.plasmaCannonPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.PlasmaCannon.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_PLASMACANNON_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_PLASMACANNON_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPlasmaCannonIcon"),
-false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.PlasmaCannon.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_PLASMACANNON_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_PLASMACANNON_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPlasmaCannonIcon"),
+                false);
 
             Driver.sniperPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-    new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.SniperRifle.Shoot)),
-    "Weapon",
-    prefix + "_DRIVER_BODY_PRIMARY_SNIPER_NAME",
-    prefix + "_DRIVER_BODY_PRIMARY_SNIPER_DESCRIPTION",
-    Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texSlugShotgunIcon"),
-    false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.SniperRifle.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_SNIPER_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_SNIPER_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texSlugShotgunIcon"),
+                false);
 
             Driver.badassShotgunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-    new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.BadassShotgun.Shoot)),
-    "Weapon",
-    prefix + "_DRIVER_BODY_PRIMARY_BADASS_SHOTGUN_NAME",
-    prefix + "_DRIVER_BODY_PRIMARY_BADASS_SHOTGUN_DESCRIPTION",
-    Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texShotgunIcon"),
-    false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.BadassShotgun.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_BADASS_SHOTGUN_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_BADASS_SHOTGUN_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texShotgunIcon"),
+                false);
 
             Driver.lunarRiflePrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.LunarRifle.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_LUNARRIFLE_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_LUNARRIFLE_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texLunarRifleIcon"),
-false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.LunarRifle.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_LUNARRIFLE_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_LUNARRIFLE_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texLunarRifleIcon"),
+                false);
 
             Driver.golemGunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.GolemGun.ChargeLaser)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_LUNARRIFLE_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_LUNARRIFLE_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texGolemGunIcon"),
-false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.GolemGun.ChargeLaser)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_LUNARRIFLE_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_LUNARRIFLE_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texGolemGunIcon"),
+                false);
 
             Driver.lunarHammerPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.LunarHammer.SwingCombo)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_LUNARHAMMER_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_LUNARHAMMER_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texLunarHammerIcon"),
-false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.LunarHammer.SwingCombo)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_LUNARHAMMER_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_LUNARHAMMER_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texLunarHammerIcon"),
+                false);
 
             Driver.nemmandoGunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Compat.NemmandoGun.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_NEMMANDO_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_NEMMANDO_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texNemmandoPrimaryIcon"),
-false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Compat.NemmandoGun.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_NEMMANDO_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_NEMMANDO_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texNemmandoPrimaryIcon"),
+                false);
 
             Driver.nemmercGunPrimarySkillDef = Modules.Skills.CreatePrimarySkillDef(
-new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Compat.NemmercGun.Shoot)),
-"Weapon",
-prefix + "_DRIVER_BODY_PRIMARY_NEMMERC_NAME",
-prefix + "_DRIVER_BODY_PRIMARY_NEMMERC_DESCRIPTION",
-Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texNemmercPrimaryIcon"),
-false);
+                new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Compat.NemmercGun.Shoot)),
+                "Weapon",
+                prefix + "_DRIVER_BODY_PRIMARY_NEMMERC_NAME",
+                prefix + "_DRIVER_BODY_PRIMARY_NEMMERC_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texNemmercPrimaryIcon"),
+                false);
             #endregion
 
             #region Secondary
@@ -1605,7 +1607,7 @@ false);
                 forceSprintDuringState = true,
                 fullRestockOnAssign = true,
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
-                resetCooldownTimerOnUse = true,
+                resetCooldownTimerOnUse = false,
                 isCombatSkill = false,
                 mustKeyPress = false,
                 cancelSprintingOnActivation = false,

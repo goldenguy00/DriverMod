@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RobDriver
@@ -68,6 +69,11 @@ namespace RobDriver
             // add config
             Modules.Config.InitWeaponConfig(weaponDef);
             Debug.Log("Added " + weaponDef.nameToken + " to catalog with index: " + weaponDef.index);
+        }
+
+        public static bool IsWeaponPistol(DriverWeaponDef weaponDef)
+        {
+            return weaponDef == Pistol || weaponDef == LunarPistol || weaponDef == VoidPistol;
         }
 
         public static void AddWeaponDrop(string bodyName, DriverWeaponDef weaponDef, bool autoComplete = true)
