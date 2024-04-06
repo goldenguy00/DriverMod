@@ -11,7 +11,6 @@ namespace RobDriver.SkillStates.Driver
         public float baseDuration = 2.4f;
         public string animString = "ReloadPistol";
         public InterruptPriority interruptPriority = InterruptPriority.PrioritySkill;
-        public CameraParamsOverrideHandle camParamsOverrideHandle;
         public bool aiming;
 
         private bool wasAiming;
@@ -35,7 +34,7 @@ namespace RobDriver.SkillStates.Driver
         {
             base.OnExit();
 
-            if (this.camParamsOverrideHandle.isValid && !this.aiming) this.cameraTargetParams.RemoveParamsOverride(this.camParamsOverrideHandle);
+            if (SteadyAim.camParamsOverrideHandle.isValid && !this.aiming) this.cameraTargetParams.RemoveParamsOverride(SteadyAim.camParamsOverrideHandle);
             if (NetworkServer.active && this.aiming) this.characterBody.RemoveBuff(RoR2Content.Buffs.Slow50);
         }
 
@@ -51,27 +50,31 @@ namespace RobDriver.SkillStates.Driver
             if (base.isAuthority && this.aiming && !this.inputBank.skill2.down)
             {
                 this.aiming = false;
-                if (this.camParamsOverrideHandle.isValid) this.cameraTargetParams.RemoveParamsOverride(this.camParamsOverrideHandle);
+                if (SteadyAim.camParamsOverrideHandle.isValid) this.cameraTargetParams.RemoveParamsOverride(SteadyAim.camParamsOverrideHandle);
                 this.GetModelAnimator().SetFloat("aimBlend", 0f);
                 if (NetworkServer.active) this.characterBody.RemoveBuff(RoR2Content.Buffs.Slow50);
             }
 
-            if (!this.aiming && this.wasAiming && base.fixedAge >= (0.8f * this.duration) && !this.heheheha)
+            // early exit
+            if (base.fixedAge >= 0.8f * this.duration)
             {
-                this.heheheha = true;
-                base.PlayCrossfade("Gesture, Override", "BufferEmpty", 0.25f);
+                this.iDrive.FinishReload();
+
+                // the fuck
+                if (!this.aiming && this.wasAiming && !this.heheheha)
+                {
+                    this.heheheha = true;
+                    base.PlayCrossfade("Gesture, Override", "BufferEmpty", 0.25f);
+                }
             }
 
             if (base.isAuthority && base.fixedAge >= this.duration)
             {
-                this.iDrive.FinishReload();
-
                 if (this.aiming)
                 {
                     this.outer.SetNextState(new SteadyAim
                     {
-                        skipAnim = true,
-                        camParamsOverrideHandle = this.camParamsOverrideHandle
+                        skipAnim = true
                     });
                 }
                 else this.outer.SetNextStateToMain();

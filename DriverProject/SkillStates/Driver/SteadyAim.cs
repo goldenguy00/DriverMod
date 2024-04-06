@@ -22,6 +22,8 @@ namespace RobDriver.SkillStates.Driver
 
         public bool skipAnim = false;
 
+        public static CameraParamsOverrideHandle camParamsOverrideHandle;
+
         protected virtual bool isPiercing
         {
             get
@@ -47,7 +49,6 @@ namespace RobDriver.SkillStates.Driver
             }
         }
 
-        public CameraParamsOverrideHandle camParamsOverrideHandle;
         private OverlayController overlayController;
         private float shotCooldown;
         private float chargeTimer;
@@ -68,7 +69,8 @@ namespace RobDriver.SkillStates.Driver
         public override void OnEnter()
         {
             base.OnEnter();
-            if (!this.camParamsOverrideHandle.isValid) this.camParamsOverrideHandle = Modules.CameraParams.OverrideCameraParams(base.cameraTargetParams, DriverCameraParams.AIM_PISTOL, 0.5f);
+            if (!SteadyAim.camParamsOverrideHandle.isValid)
+                SteadyAim.camParamsOverrideHandle = Modules.CameraParams.OverrideCameraParams(base.cameraTargetParams, DriverCameraParams.AIM_PISTOL, 0.5f);
 
             base.PlayAnimation("AimPitch", "SteadyAimPitch");
 
@@ -180,7 +182,6 @@ namespace RobDriver.SkillStates.Driver
                         this.outer.SetNextState(new ReloadPistol
                         {
                             animString = "SteadyAimReload",
-                            camParamsOverrideHandle = this.camParamsOverrideHandle,
                             aiming = true
                         });
                         this.reloading = true;
@@ -249,7 +250,7 @@ namespace RobDriver.SkillStates.Driver
                     }
                 }
 
-                if ((this.iDrive.passive.isPistolOnly || this.iDrive.passive.isBullets || this.iDrive.passive.isRyan) && this.iDrive.weaponTimer != this.iDrive.maxWeaponTimer)
+                if (this.iDrive.passive.isPistolOnly && this.iDrive.weaponTimer != this.iDrive.maxWeaponTimer)
                 {
                     this.outer.SetNextState(new WaitForReload());
                     return;
@@ -552,7 +553,7 @@ namespace RobDriver.SkillStates.Driver
 
             this.PlayExitAnim();
             base.PlayAnimation("AimPitch", "AimPitch");
-            if (!this.reloading) this.cameraTargetParams.RemoveParamsOverride(this.camParamsOverrideHandle);
+            if (!this.reloading) this.cameraTargetParams.RemoveParamsOverride(SteadyAim.camParamsOverrideHandle);
 
             if (this.characterBody.master && this.characterBody.master.inventory)
             {
