@@ -1,6 +1,7 @@
 ﻿using EntityStates;
 using R2API;
 using RobDriver.Modules.Components;
+using RobDriver.Modules.Misc;
 using RoR2;
 using RoR2.Skills;
 using System;
@@ -151,6 +152,22 @@ namespace RobDriver.Modules
 
         public static T CreateSkillDef<T>(SkillDefInfo skillDefInfo) where T : SkillDef {
 
+            T skillDef = ScriptableObject.CreateInstance<T>();
+
+            popuplateSKillDef(skillDefInfo, skillDef);
+
+            skillDefs.Add(skillDef);
+
+            return skillDef;
+        }
+
+        public static AwesomeSauceSkillDef CreateAwesomeSkillDef(SkillDefInfo skillDefInfo)
+        {
+            return CreateAwesomeSkillDef<AwesomeSauceSkillDef>(skillDefInfo);
+        }
+
+        public static T CreateAwesomeSkillDef<T>(SkillDefInfo skillDefInfo) where T : AwesomeSauceSkillDef
+        {
             T skillDef = ScriptableObject.CreateInstance<T>();
 
             popuplateSKillDef(skillDefInfo, skillDef);

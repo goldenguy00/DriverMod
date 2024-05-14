@@ -135,6 +135,9 @@ namespace RobDriver.Modules.Survivors
         internal static SkillDef skateboardSkillDef;
         internal static SkillDef skateCancelSkillDef;
 
+        internal static SkillDef counterSkillDef;
+        internal static EntityStates.SerializableEntityStateType airDodgeState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Compat.Hunk.AirDodge));
+
         internal static SkillDef scepterGrenadeSkillDef;
         internal static SkillDef scepterSupplyDropSkillDef;
         internal static SkillDef scepterSupplyDropLegacySkillDef;
@@ -258,6 +261,12 @@ namespace RobDriver.Modules.Survivors
             passiveController.customName = "Passive";
             passiveController.enabled = false;
 
+
+            EntityStateMachine hunkMachine = newPrefab.AddComponent<EntityStateMachine>();
+            hunkMachine.customName = "Aim";
+            hunkMachine.initialStateType = new EntityStates.SerializableEntityStateType(typeof(EntityStates.Idle));
+            hunkMachine.mainStateType = new EntityStates.SerializableEntityStateType(typeof(EntityStates.Idle));
+
             // this is for the lunar shard skill..
             EntityStateMachine stateMachine = newPrefab.AddComponent<EntityStateMachine>();
             stateMachine.customName = "Shard";
@@ -271,6 +280,7 @@ namespace RobDriver.Modules.Survivors
             newPrefab.GetComponent<CharacterDeathBehavior>().deathState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.FuckMyAss));
 
             newPrefab.AddComponent<DriverController>();
+            newPrefab.AddComponent<HunkController>();
             #endregion
 
             #region Model
@@ -935,6 +945,13 @@ namespace RobDriver.Modules.Survivors
                 prefix + "_DRIVER_BODY_PRIMARY_NEMMERC_DESCRIPTION",
                 Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texNemmercPrimaryIcon"),
                 false);
+            Driver.counterSkillDef = Modules.Skills.CreatePrimarySkillDef(new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Compat.Hunk.Counter.Lunge)),
+                "Weapon",
+                prefix + "_HUNK_BODY_PRIMARY_KNIFE_NAME",
+                prefix + "_HUNK_BODY_PRIMARY_KNIFE_DESCRIPTION",
+                Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texKnifeIcon"), false);
+            counterSkillDef.interruptPriority = EntityStates.InterruptPriority.PrioritySkill;
+
             #endregion
 
             #region Secondary
@@ -1638,7 +1655,31 @@ namespace RobDriver.Modules.Survivors
                 stockToConsume = 1
             });
 
-            Modules.Skills.AddUtilitySkills(prefab, slideSkillDef, dashSkillDef, skateboardSkillDef);
+            SkillDef dodgeSkillDef = Modules.Skills.CreateAwesomeSkillDef(new SkillDefInfo
+            {
+                skillName = prefix + "_HUNK_BODY_UTILITY_DODGE_NAME",
+                skillNameToken = prefix + "_HUNK_BODY_UTILITY_DODGE_NAME",
+                skillDescriptionToken = prefix + "_HUNK_BODY_UTILITY_DODGE_DESCRIPTION",
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texDodgeIcon"),
+                activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Driver.Compat.Hunk.Step)),
+                activationStateMachineName = "Weapon",
+                baseMaxStock = 2, //1
+                baseRechargeInterval = 6f, //4
+                beginSkillCooldownOnSkillEnd = true, //false
+                canceledFromSprinting = false,
+                forceSprintDuringState = true,
+                fullRestockOnAssign = true,
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
+                resetCooldownTimerOnUse = true, //false
+                isCombatSkill = false,
+                mustKeyPress = true,
+                cancelSprintingOnActivation = false,
+                rechargeStock = 99, //1
+                requiredStock = 1,
+                stockToConsume = 1
+            });
+
+            Modules.Skills.AddUtilitySkills(prefab, slideSkillDef, dashSkillDef, skateboardSkillDef, dodgeSkillDef);
             #endregion
 
             #region Special

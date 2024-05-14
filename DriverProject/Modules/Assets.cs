@@ -192,6 +192,8 @@ namespace RobDriver.Modules
         public static GameObject bigRedSwingEffect;
         public static GameObject consumeOrb;
 
+        public static GameObject kickImpactEffect;
+
         internal static DriverWeaponDef pistolWeaponDef;
         internal static DriverWeaponDef goldenGunWeaponDef;
         internal static DriverWeaponDef pyriteGunWeaponDef;
@@ -1361,6 +1363,7 @@ namespace RobDriver.Modules
 
             // ravager orb succ
             CreateOrb();
+            kickImpactEffect = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/OmniImpactVFXLoaderLightning.prefab").WaitForCompletion();
         }
 
         private static void CreateOrb()

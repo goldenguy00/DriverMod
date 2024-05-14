@@ -2981,20 +2981,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mario\\.nuget\\packages\\": {}
+    "C:\\Users\\golde\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\RoR2Mods\\Driver\\DriverProject\\DriverMod.csproj",
+      "projectUniqueName": "C:\\Users\\golde\\Documents\\GitHub\\DriverModRemote\\DriverProject\\DriverMod.csproj",
       "projectName": "DriverMod",
-      "projectPath": "E:\\RoR2Mods\\Driver\\DriverProject\\DriverMod.csproj",
-      "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
-      "outputPath": "E:\\RoR2Mods\\Driver\\DriverProject\\obj\\",
+      "projectPath": "C:\\Users\\golde\\Documents\\GitHub\\DriverModRemote\\DriverProject\\DriverMod.csproj",
+      "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\golde\\Documents\\GitHub\\DriverModRemote\\DriverProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "E:\\RoR2Mods\\Driver\\NuGet.Config",
-        "C:\\Users\\mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\golde\\Documents\\GitHub\\DriverModRemote\\NuGet.Config",
+        "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3015,6 +3015,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3068,7 +3073,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

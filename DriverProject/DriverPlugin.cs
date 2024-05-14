@@ -55,6 +55,8 @@ namespace RobDriver
         public static bool greenAlienHeadInstalled => BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.Borbo.GreenAlienHead");
         public static bool ravagerInstalled => BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.rob.Ravager");
 
+        public static List<Modules.Components.HunkProjectileTracker> projectileList = new List<Modules.Components.HunkProjectileTracker>();
+
         private void Awake()
         {
             instance = this;
@@ -121,6 +123,14 @@ namespace RobDriver
             On.RoR2.UI.MainMenu.MainMenuController.Start += MainMenuController_Start;
             // uncomment this if network testing
             //On.RoR2.Networking.NetworkManagerSystemSteam.OnClientConnect += (s, u, t) => { };
+
+            On.RoR2.Projectile.ProjectileGhostController.Awake += ProjectileGhostController_Awake;
+        }
+
+        private void ProjectileGhostController_Awake(On.RoR2.Projectile.ProjectileGhostController.orig_Awake orig, RoR2.Projectile.ProjectileGhostController self)
+        {
+            if (self) self.gameObject.AddComponent<Modules.Components.HunkProjectileTracker>();
+            orig(self);
         }
 
         private void MainMenuController_Start(On.RoR2.UI.MainMenu.MainMenuController.orig_Start orig, RoR2.UI.MainMenu.MainMenuController self)
@@ -167,6 +177,8 @@ namespace RobDriver
                 self.crit += 40f;
                 self.regen += 10f;
             }
+
+            if (self.HasBuff(Modules.Buffs.immobilizedBuff)) self.moveSpeed = 0f;
         }
 
         private void CrosshairController_Awake(On.RoR2.UI.CrosshairController.orig_Awake orig, RoR2.UI.CrosshairController self)

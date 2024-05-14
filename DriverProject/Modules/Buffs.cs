@@ -1,15 +1,8 @@
-﻿using Mono.Cecil.Cil;
-using MonoMod.Cil;
-using Moonstorm.Starstorm2;
-using R2API;
-using RobDriver.Modules.Components;
+﻿using R2API;
 using RoR2;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.Networking;
 
 namespace RobDriver.Modules
 {
@@ -27,6 +20,7 @@ namespace RobDriver.Modules
         internal static BuffDef syringeCritBuff;
         internal static BuffDef syringeScepterBuff;
         internal static BuffDef syringeNewBuff;
+        internal static BuffDef immobilizedBuff;
 
         internal static void RegisterBuffs()
         {
@@ -38,12 +32,13 @@ namespace RobDriver.Modules
             syringeNewBuff = AddNewBuff("RobDriverSyringeNewBuff", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBuffSyringe"), new Color(1f, 70f / 255f, 75f / 255f), false, false);
             syringeScepterBuff = AddNewBuff("RobDriverSyringeScepterBuff", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBuffSyringe"), Modules.Survivors.Driver.characterColor, false, false);
             gougeDebuff = AddNewBuff("RobDriverGougeDebuff", Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texIconBuffGouge"), new Color (0.67058825f, 0.15686275f, 0.16862746f), false, false);
+            immobilizedBuff = AddNewBuff("buffHunkImmobilized", null, Color.white, false, false, true);
 
             gougeIndex = DotAPI.RegisterDotDef(0.25f, 0.25f, DamageColorIndex.SuperBleed, gougeDebuff);
         }
 
         // simple helper method
-        internal static BuffDef AddNewBuff(string buffName, Sprite buffIcon, Color buffColor, bool canStack, bool isDebuff)
+        internal static BuffDef AddNewBuff(string buffName, Sprite buffIcon, Color buffColor, bool canStack, bool isDebuff, bool isHidden = false)
         {
             BuffDef buffDef = ScriptableObject.CreateInstance<BuffDef>();
             buffDef.name = buffName;
@@ -52,6 +47,7 @@ namespace RobDriver.Modules
             buffDef.isDebuff = isDebuff;
             buffDef.eliteDef = null;
             buffDef.iconSprite = buffIcon;
+            buffDef.isHidden = isHidden;
 
             buffDefs.Add(buffDef);
 

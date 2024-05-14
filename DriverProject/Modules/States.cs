@@ -143,6 +143,20 @@ namespace RobDriver.Modules
             entityStates.Add(typeof(RobDriver.SkillStates.Driver.Skateboard.Start));
             entityStates.Add(typeof(RobDriver.SkillStates.Driver.Skateboard.Stop));
 
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.BaseHunkSkillState));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.Roll));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.Step));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.AirDodge));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.Roll));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.SlowRoll));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.PerfectLanding));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.KnifeCounter));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.Counter.Kick));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.Counter.Lunge));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.Counter.NeckSnap));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.Counter.NeckSnapped));
+            entityStates.Add(typeof(SkillStates.Driver.Compat.Hunk.Counter.Punch));
+
             entityStates.Add(typeof(RobDriver.SkillStates.Emote.BaseEmote));
             entityStates.Add(typeof(RobDriver.SkillStates.Emote.Rest));
             entityStates.Add(typeof(RobDriver.SkillStates.Emote.Taunt));
