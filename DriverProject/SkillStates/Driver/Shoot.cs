@@ -77,11 +77,8 @@ namespace RobDriver.SkillStates.Driver
             }
             else
             {
-                if (base.isAuthority)
-                {
-                    this.hasFired = true;
-                    this.Fire();
-                }
+                this.hasFired = true;
+                this.Fire();
 
                 this.PlayAnimation("Gesture, Override", "Shoot", "Shoot.playbackRate", this.duration * 1.5f);
             }
@@ -100,8 +97,6 @@ namespace RobDriver.SkillStates.Driver
         private void Fire()
         {
             EffectManager.SimpleMuzzleFlash(EntityStates.Commando.CommandoWeapon.FirePistol2.muzzleEffectPrefab, this.gameObject, this.muzzleString, false);
-
-
             Util.PlaySound(this.shootSoundString, this.gameObject);
 
             if (base.isAuthority)

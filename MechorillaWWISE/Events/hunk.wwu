@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1CD0E6DA-9A93-402C-93C5-1B60CC02A435}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="hunk" ID="{1CD0E6DA-9A93-402C-93C5-1B60CC02A435}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="sfx_hunk_footstep" ID="{406CB822-43EE-4EA6-83E9-928057DF66CF}">
+					<ChildrenList>
+						<Action Name="" ID="{B5F80CF0-66D4-483E-9F8A-85C08CF2B60A}" ShortID="161845819">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="step" ID="{05442E93-8AE5-4EAD-90D6-13BCE6AA891A}" WorkUnitID="{483D7924-84B5-4242-A00B-DCBCB99CB94E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="sfx_hunk_sprint" ID="{9E75F8B2-25AE-40C4-BCD9-6C1A8ABFAE32}">
+					<ChildrenList>
+						<Action Name="" ID="{7339E0F6-205A-4874-B73A-363EE35795BB}" ShortID="833361488">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="runstep" ID="{85EE05E0-F02D-49D1-A80E-E7A19BBCEEBF}" WorkUnitID="{483D7924-84B5-4242-A00B-DCBCB99CB94E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="sfx_hunk_land" ID="{79EE048C-0BBF-4780-8D5B-A5B482D03973}">
+					<ChildrenList>
+						<Action Name="" ID="{6DED19D9-C844-4219-A993-7107A43F3B1A}" ShortID="315893496">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="land" ID="{DDA0EB71-1899-4144-A44B-AF8E08439664}" WorkUnitID="{483D7924-84B5-4242-A00B-DCBCB99CB94E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

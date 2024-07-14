@@ -217,6 +217,7 @@ namespace RobDriver.Modules
         private static void CreateCoin()
         {
             var coinProjectileGhost = CreateGhostPrefab("CoinProjectileGhost");
+            coinProjectileGhost.name = "DriverCoinProjectileGhost";
 
             var pG = coinProjectileGhost.GetComponent<ProjectileGhostController>();
             pG.inheritScaleFromProjectile = false;
@@ -225,7 +226,7 @@ namespace RobDriver.Modules
             coinProjectileGhost.transform.GetChild(0).GetChild(0).GetComponent<ParticleSystemRenderer>().material.SetColor("_TintColor", Color.yellow);
             coinProjectileGhost.transform.GetChild(1).GetComponent<TrailRenderer>().material = Addressables.LoadAssetAsync<Material>("RoR2/Base/Captain/matCaptainTracerTrail.mat").WaitForCompletion();
             coinProjectileGhost.transform.GetChild(1).GetComponent<TrailRenderer>().material.SetColor("_TintColor", Color.yellow);
-            coinProjectile = Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("CoinProjectile").InstantiateClone("CoinProjectile", true);
+            coinProjectile = Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("CoinProjectile").InstantiateClone("DriverCoinProjectile", true);
             coinProjectile.AddComponent<NetworkIdentity>();
             var soundLoop = coinProjectile.AddComponent<StopCoinSound>();
             soundLoop.SoundEventToPlay = "sfx_driver_coin_spin";

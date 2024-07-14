@@ -211,7 +211,7 @@ namespace RobDriver.SkillStates.Driver
                     Util.PlaySound("sfx_driver_reload_01", this.gameObject);*/
                 }
             }
-            else if (shotCooldown <= 0f && base.isAuthority)
+            else if (shotCooldown <= 0f)
             {
                 if (this.autoFocus)
                 {

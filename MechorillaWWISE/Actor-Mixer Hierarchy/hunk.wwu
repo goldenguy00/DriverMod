@@ -1,0 +1,1743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{483D7924-84B5-4242-A00B-DCBCB99CB94E}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="hunk" ID="{483D7924-84B5-4242-A00B-DCBCB99CB94E}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="SFX" ID="{3C7174FA-5DE5-443A-B33B-D1247B337307}" ShortID="318335094">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{14C5FC03-F81A-42FF-91C9-0C4CFD46925B}" ShortID="874479794">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Volume_SFX" ID="{4FF50BF4-04DE-43F4-BCE1-1243931798A7}" WorkUnitID="{86A48E9A-08D2-42C8-A690-503176424BE7}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{FCD999EA-A52D-499A-8B3D-2FFBA1F340ED}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Footstep" ID="{297C008B-2DA5-405F-9AEF-7EA23A725207}" ShortID="1044678589">
+							<ChildrenList>
+								<SwitchContainer Name="step" ID="{05442E93-8AE5-4EAD-90D6-13BCE6AA891A}" ShortID="650467835">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="stone" ID="{34026AD5-7356-47ED-80D9-0306D5404EC8}" WorkUnitID="{D31F7E87-C02D-4DB3-A366-99E525B6ED51}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="material" ID="{D8E830E7-BAA9-4C29-9B13-05F1B56692BF}" WorkUnitID="{D31F7E87-C02D-4DB3-A366-99E525B6ED51}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="stone" ID="{2A2BC8B0-4EB0-46FD-AE6C-46764B285544}" ShortID="27498546">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_conc_solid_stairs_01" ID="{40026C14-8B1B-438A-A500-CBF64EDA9EF2}" ShortID="813920157">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_conc_solid_stairs_01" ID="{124CFD7A-F9C1-488A-BA98-E00552020C99}">
+															<Language>SFX</Language>
+															<AudioFile>fst_conc_solid_stairs_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="313176588"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_conc_solid_stairs_01" ID="{124CFD7A-F9C1-488A-BA98-E00552020C99}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_conc_solid_stairs_02" ID="{495DC6FA-F853-4345-88DC-92D3E2FC6725}" ShortID="247420545">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_conc_solid_stairs_02" ID="{95969E38-B483-4ABD-9169-F81298D28A3F}">
+															<Language>SFX</Language>
+															<AudioFile>fst_conc_solid_stairs_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="948751731"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_conc_solid_stairs_02" ID="{95969E38-B483-4ABD-9169-F81298D28A3F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="dirt" ID="{AC84B9FF-2825-46B9-834F-6FD1761F73A2}" ShortID="205088606">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_dirt_walk_04" ID="{AD30D48D-A1DB-4B23-9E02-EC807342AEDE}" ShortID="498037488">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_dirt_walk_04" ID="{7B11D952-B42B-4735-82BC-066DDBC0F687}">
+															<Language>SFX</Language>
+															<AudioFile>fst_dirt_walk_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="466349783"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_dirt_walk_04" ID="{7B11D952-B42B-4735-82BC-066DDBC0F687}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_dirt_walk_01" ID="{5685CB84-B318-47B0-92F5-2FF733EE5E4F}" ShortID="635078332">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_dirt_walk_01" ID="{DFC35719-933B-464C-B493-48AF4D7F6258}">
+															<Language>SFX</Language>
+															<AudioFile>fst_dirt_walk_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="947064508"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_dirt_walk_01" ID="{DFC35719-933B-464C-B493-48AF4D7F6258}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_dirt_walk_02" ID="{26916620-E462-464F-91D8-DF5EE2466231}" ShortID="157594458">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_dirt_walk_02" ID="{CF5BE764-D880-4091-AB85-428B30261268}">
+															<Language>SFX</Language>
+															<AudioFile>fst_dirt_walk_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="582204194"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_dirt_walk_02" ID="{CF5BE764-D880-4091-AB85-428B30261268}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_dirt_walk_03" ID="{937B953C-8724-45FA-9F2E-5D0BDFB5866B}" ShortID="227833752">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_dirt_walk_03" ID="{78BDECF0-B379-456E-8DCC-1EA94317C39D}">
+															<Language>SFX</Language>
+															<AudioFile>fst_dirt_walk_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="735748571"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_dirt_walk_03" ID="{78BDECF0-B379-456E-8DCC-1EA94317C39D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="snow" ID="{DE994785-4F6D-4B31-AA1A-7770BAEBCDA8}" ShortID="860526999">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_gravel_walk_04" ID="{ABCA7ED5-60E7-4A05-91A2-C0557A97473A}" ShortID="411898181">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_walk_04" ID="{07C25B31-F06E-4336-BD90-1CECF7589565}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_walk_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="445611576"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_walk_04" ID="{07C25B31-F06E-4336-BD90-1CECF7589565}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_gravel_walk_03" ID="{4CD40578-09D3-42AA-81A6-8782A470DD98}" ShortID="43056858">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_walk_03" ID="{5D29C8B2-5B28-4DEA-84E4-E7FB18545253}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_walk_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="292815986"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_walk_03" ID="{5D29C8B2-5B28-4DEA-84E4-E7FB18545253}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_gravel_walk_01" ID="{C8034F70-C8A4-4884-A241-503B22B9D708}" ShortID="965628746">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_walk_01" ID="{468D82BC-591C-40F1-BA18-4068DFFB33CF}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_walk_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="614584998"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_walk_01" ID="{468D82BC-591C-40F1-BA18-4068DFFB33CF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_gravel_walk_02" ID="{1007565A-AC8F-4A34-9A61-C94D6C6F9ECD}" ShortID="168009807">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_walk_02" ID="{130198A4-A204-40B9-9C64-3EC95F65B48A}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_walk_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="231197747"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_walk_02" ID="{130198A4-A204-40B9-9C64-3EC95F65B48A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="water" ID="{FC2DDD01-0C18-4BE4-B21F-0C20E022042E}" ShortID="290753061">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_water_walk_01" ID="{318BA3B8-62CB-49A4-85E1-9477E73482B5}" ShortID="565512718">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_water_walk_01" ID="{63788FC4-F684-4973-928A-5E0AF646E3CC}">
+															<Language>SFX</Language>
+															<AudioFile>fst_water_walk_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="785144644"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_water_walk_01" ID="{63788FC4-F684-4973-928A-5E0AF646E3CC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_water_walk_02" ID="{A0C27149-1BB1-4121-99D8-DB698814523E}" ShortID="242440733">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_water_walk_02" ID="{53848C5F-228A-46F3-BC51-8DA48B4E788A}">
+															<Language>SFX</Language>
+															<AudioFile>fst_water_walk_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="735628595"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_water_walk_02" ID="{53848C5F-228A-46F3-BC51-8DA48B4E788A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_water_walk_03" ID="{CAAEEC9F-FB37-4686-AF2C-66B164B3EF06}" ShortID="814201908">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_water_walk_03" ID="{064A2CB3-2D99-4B28-9B01-452FCF1CC653}">
+															<Language>SFX</Language>
+															<AudioFile>fst_water_walk_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="168303297"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_water_walk_03" ID="{064A2CB3-2D99-4B28-9B01-452FCF1CC653}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="metal" ID="{55A58018-18B4-426C-82C5-71378C398EA0}" ShortID="901314772">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_metal_hollow_stairs_02" ID="{A888F3D0-BAB8-446D-8130-C229D9F7C6CB}" ShortID="87105026">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_metal_hollow_stairs_02" ID="{271165C5-2A5B-4CEC-9D5C-E3E481D4872D}">
+															<Language>SFX</Language>
+															<AudioFile>fst_metal_hollow_stairs_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1021183238"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_metal_hollow_stairs_02" ID="{271165C5-2A5B-4CEC-9D5C-E3E481D4872D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_metal_hollow_stairs_01" ID="{787FDEB8-1D02-46E0-A48D-8F7EAEC38FE4}" ShortID="869925495">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_metal_hollow_stairs_01" ID="{BFA1358C-4328-4083-9A35-5337A3609BD9}">
+															<Language>SFX</Language>
+															<AudioFile>fst_metal_hollow_stairs_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="481199616"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_metal_hollow_stairs_01" ID="{BFA1358C-4328-4083-9A35-5337A3609BD9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="wood" ID="{2EACA4EA-1BB7-45C4-BEDE-9B8F986F4B23}" ShortID="100316560">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_wood_sneak_01" ID="{21011BFD-CF66-4743-95C2-A4C7583AA6CC}" ShortID="527758499">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_wood_sneak_01" ID="{228E2F97-99C2-4E12-A8EA-FB1FCE7AF9AD}">
+															<Language>SFX</Language>
+															<AudioFile>fst_wood_sneak_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="560405480"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_wood_sneak_01" ID="{228E2F97-99C2-4E12-A8EA-FB1FCE7AF9AD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_wood_sneak_02" ID="{E1857062-6FD3-4422-BE20-7256F165B8D0}" ShortID="959487589">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_wood_sneak_02" ID="{A1BD9449-E09C-4349-844D-A175AFCF8B96}">
+															<Language>SFX</Language>
+															<AudioFile>fst_wood_sneak_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1046672750"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_wood_sneak_02" ID="{A1BD9449-E09C-4349-844D-A175AFCF8B96}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="water" ID="{FC2DDD01-0C18-4BE4-B21F-0C20E022042E}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="metal" ID="{55A58018-18B4-426C-82C5-71378C398EA0}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="snow" ID="{DE994785-4F6D-4B31-AA1A-7770BAEBCDA8}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="stone" ID="{2A2BC8B0-4EB0-46FD-AE6C-46764B285544}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="wood" ID="{2EACA4EA-1BB7-45C4-BEDE-9B8F986F4B23}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="dirt" ID="{AC84B9FF-2825-46B9-834F-6FD1761F73A2}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="wood" ID="{292F7A11-1B08-45A2-A39F-50D3DA75D76F}"/>
+												<ItemList>
+													<ItemRef Name="wood" ID="{2EACA4EA-1BB7-45C4-BEDE-9B8F986F4B23}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="snow" ID="{8C528417-7F18-4881-9431-2C18DE9518FD}"/>
+												<ItemList>
+													<ItemRef Name="snow" ID="{DE994785-4F6D-4B31-AA1A-7770BAEBCDA8}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="water_shallow" ID="{C4244129-C2BB-4111-9842-E035A8939F6C}"/>
+												<ItemList>
+													<ItemRef Name="water" ID="{FC2DDD01-0C18-4BE4-B21F-0C20E022042E}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="dirt" ID="{2A76B686-E4C9-4D02-8703-37C2C86035FA}"/>
+												<ItemList>
+													<ItemRef Name="dirt" ID="{AC84B9FF-2825-46B9-834F-6FD1761F73A2}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="stone" ID="{34026AD5-7356-47ED-80D9-0306D5404EC8}"/>
+												<ItemList>
+													<ItemRef Name="stone" ID="{2A2BC8B0-4EB0-46FD-AE6C-46764B285544}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="metal" ID="{4446F0D7-1343-4C63-ABD3-1A881D917FA4}"/>
+												<ItemList>
+													<ItemRef Name="metal" ID="{55A58018-18B4-426C-82C5-71378C398EA0}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<RandomSequenceContainer Name="land" ID="{DDA0EB71-1899-4144-A44B-AF8E08439664}" ShortID="854925319">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="fst_conc_solid_land_02" ID="{50E35870-1A20-4F17-BF3B-3BA764E6AC18}" ShortID="819966747">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="fst_conc_solid_land_02" ID="{DC5C3195-0F83-4C6A-AC58-280E48B915CF}">
+													<Language>SFX</Language>
+													<AudioFile>fst_conc_solid_land_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1044258602"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="fst_conc_solid_land_02" ID="{DC5C3195-0F83-4C6A-AC58-280E48B915CF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="fst_conc_solid_land_01" ID="{8533DAAC-C0E8-457C-9AE8-9B6AB03D05B7}" ShortID="925102382">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="fst_conc_solid_land_01" ID="{5022C93C-E324-4B5B-A47A-59593D8BBAE6}">
+													<Language>SFX</Language>
+													<AudioFile>fst_conc_solid_land_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="41383980"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="fst_conc_solid_land_01" ID="{5022C93C-E324-4B5B-A47A-59593D8BBAE6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<SwitchContainer Name="runstep" ID="{85EE05E0-F02D-49D1-A80E-E7A19BBCEEBF}" ShortID="266007140">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="stone" ID="{34026AD5-7356-47ED-80D9-0306D5404EC8}" WorkUnitID="{D31F7E87-C02D-4DB3-A366-99E525B6ED51}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="material" ID="{D8E830E7-BAA9-4C29-9B13-05F1B56692BF}" WorkUnitID="{D31F7E87-C02D-4DB3-A366-99E525B6ED51}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="stone" ID="{DA55E90B-A651-4C72-BB11-15AF1D83CAB4}" ShortID="989418571">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_conc_solid_run_03" ID="{42616E0A-B998-4F9D-B34B-FBD16FCB86E9}" ShortID="156059489">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_conc_solid_run_03" ID="{4199DA12-3C08-42F6-B143-13717CAE8617}">
+															<Language>SFX</Language>
+															<AudioFile>fst_conc_solid_run_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="802226734"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_conc_solid_run_03" ID="{4199DA12-3C08-42F6-B143-13717CAE8617}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_conc_solid_run_04" ID="{70091E03-587C-4E44-B3C2-41537FF09AFB}" ShortID="617555450">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_conc_solid_run_04" ID="{5A051D30-276D-43C4-9889-2D085D1B0CAC}">
+															<Language>SFX</Language>
+															<AudioFile>fst_conc_solid_run_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1059966988"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_conc_solid_run_04" ID="{5A051D30-276D-43C4-9889-2D085D1B0CAC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_conc_solid_run_02" ID="{B292A4FD-4694-4907-A3E8-D7F261CA4B0C}" ShortID="595778291">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_conc_solid_run_02" ID="{A93B8D3A-0BFF-4B69-B514-CCF7E4C09717}">
+															<Language>SFX</Language>
+															<AudioFile>fst_conc_solid_run_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="35706655"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_conc_solid_run_02" ID="{A93B8D3A-0BFF-4B69-B514-CCF7E4C09717}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_conc_solid_run_01" ID="{F8D79D64-16BA-4D56-8EE3-1744F7FF60EC}" ShortID="494755593">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_conc_solid_run_01" ID="{1E74126B-D191-426C-A5E7-C73D6F663A0C}">
+															<Language>SFX</Language>
+															<AudioFile>fst_conc_solid_run_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="605659134"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_conc_solid_run_01" ID="{1E74126B-D191-426C-A5E7-C73D6F663A0C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="dirt" ID="{B9E4ACF8-503A-4F6E-8CAD-5D36E9D52FD2}" ShortID="223203177">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_dirt_run_02" ID="{7D4B104B-6D47-4607-8BE2-F6087BBA9E2A}" ShortID="1015865127">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_dirt_run_02" ID="{BA4EB7B9-3AB2-4865-8E34-F53BB1F9CBC8}">
+															<Language>SFX</Language>
+															<AudioFile>fst_dirt_run_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="935892474"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_dirt_run_02" ID="{BA4EB7B9-3AB2-4865-8E34-F53BB1F9CBC8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_dirt_run_01" ID="{37EBF455-0104-4EFC-9CAE-1EAD14E707E6}" ShortID="1064156341">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_dirt_run_01" ID="{6FC8CD7C-533A-4EB1-8673-62D30A292FC4}">
+															<Language>SFX</Language>
+															<AudioFile>fst_dirt_run_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="324903527"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_dirt_run_01" ID="{6FC8CD7C-533A-4EB1-8673-62D30A292FC4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_dirt_run_03" ID="{49A8CC00-A6AC-46F5-B95D-FBA5CEDE9F1F}" ShortID="367444421">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_dirt_run_03" ID="{62C83103-7D57-4E38-8758-1A539CC77589}">
+															<Language>SFX</Language>
+															<AudioFile>fst_dirt_run_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="329491236"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_dirt_run_03" ID="{62C83103-7D57-4E38-8758-1A539CC77589}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_dirt_run_04" ID="{F5DBA97F-D58B-4548-9668-0043541A0BD7}" ShortID="593241392">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_dirt_run_04" ID="{4FF71425-CECF-416D-8CD1-459963F0A467}">
+															<Language>SFX</Language>
+															<AudioFile>fst_dirt_run_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="108705422"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_dirt_run_04" ID="{4FF71425-CECF-416D-8CD1-459963F0A467}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="snow" ID="{554AD103-7709-4B87-BA16-1812483DFFA9}" ShortID="1066904606">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_gravel_run_05" ID="{AA80C521-EBA2-47BC-A089-3E953A1282C1}" ShortID="531078873">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_run_05" ID="{2D6BB786-9EB1-4F1F-B6FD-4075F4B49310}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_run_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="550923128"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_run_05" ID="{2D6BB786-9EB1-4F1F-B6FD-4075F4B49310}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_gravel_run_06" ID="{3DA7B7CF-0497-454E-ABE2-4E1C966F96EC}" ShortID="977063019">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_run_06" ID="{482717E0-74DA-4945-A88D-5E2750A7B5B0}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_run_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="611555834"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_run_06" ID="{482717E0-74DA-4945-A88D-5E2750A7B5B0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_gravel_run_02" ID="{DD3230DD-3E0B-45B8-863B-A55AB9D43045}" ShortID="248787313">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_run_02" ID="{198151DD-7EEA-43BE-98AC-5B99D5A85B40}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_run_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="915651017"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_run_02" ID="{198151DD-7EEA-43BE-98AC-5B99D5A85B40}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_gravel_run_03" ID="{70F3C4FD-9A17-4996-B4F9-233B811D55C1}" ShortID="1031891867">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_run_03" ID="{FAB44AD1-A5DB-4D10-85AE-E2F89AAB9DE5}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_run_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="50175276"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_run_03" ID="{FAB44AD1-A5DB-4D10-85AE-E2F89AAB9DE5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_gravel_run_01" ID="{0DFB4738-54C1-4CD6-AD4F-29A983AF2E8C}" ShortID="965962390">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_run_01" ID="{A8F839B7-F5F4-4F65-BAB3-6BB67C45FDA8}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_run_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="637382943"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_run_01" ID="{A8F839B7-F5F4-4F65-BAB3-6BB67C45FDA8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_gravel_run_04" ID="{A198E7BF-EBD0-479C-BE39-DAD3C6A6C7A1}" ShortID="656200415">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_gravel_run_04" ID="{9728E2DF-2F75-4B28-B371-FF4091756459}">
+															<Language>SFX</Language>
+															<AudioFile>fst_gravel_run_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="185794212"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_gravel_run_04" ID="{9728E2DF-2F75-4B28-B371-FF4091756459}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="water" ID="{8F92B0B8-F486-4A45-8034-6EAE2165F2EE}" ShortID="42562466">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_water_run_01" ID="{1EAE033E-09A2-46EC-A0A8-A1BEF575968B}" ShortID="135935346">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_water_run_01" ID="{FB180CB5-03A1-42BB-8B28-7A9DDC23BFF4}">
+															<Language>SFX</Language>
+															<AudioFile>fst_water_run_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="389823675"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_water_run_01" ID="{FB180CB5-03A1-42BB-8B28-7A9DDC23BFF4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_water_run_05" ID="{5355B293-BFAE-480A-9FB3-553E55E2C4E8}" ShortID="57606872">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_water_run_05" ID="{AD78CFF3-2ABB-48BE-A82B-0C7D90481FCF}">
+															<Language>SFX</Language>
+															<AudioFile>fst_water_run_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="340311794"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_water_run_05" ID="{AD78CFF3-2ABB-48BE-A82B-0C7D90481FCF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_water_run_03" ID="{6AB8F9F8-C2BA-47C6-A928-30C4B5FB8596}" ShortID="289517126">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_water_run_03" ID="{74DE352B-96DC-48A9-AD91-E215FFB0562F}">
+															<Language>SFX</Language>
+															<AudioFile>fst_water_run_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="468988665"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_water_run_03" ID="{74DE352B-96DC-48A9-AD91-E215FFB0562F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_water_run_02" ID="{42EBABCF-990B-4B59-9176-051709809788}" ShortID="690697690">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_water_run_02" ID="{A41AFC02-CA06-4A70-94ED-FC16D83C236B}">
+															<Language>SFX</Language>
+															<AudioFile>fst_water_run_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="441299784"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_water_run_02" ID="{A41AFC02-CA06-4A70-94ED-FC16D83C236B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_water_run_04" ID="{A33539BC-F130-49EC-860D-F51AEE3D2229}" ShortID="696574742">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_water_run_04" ID="{E7A5E41B-CFA4-410A-B500-3593D0B98458}">
+															<Language>SFX</Language>
+															<AudioFile>fst_water_run_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="428085301"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_water_run_04" ID="{E7A5E41B-CFA4-410A-B500-3593D0B98458}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="metal" ID="{9AF28225-595D-4C57-A788-74BF6E5A3D87}" ShortID="335896786">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_metal_solid_run_05" ID="{E3E3B841-8E98-43D5-8141-96B95ACE80D7}" ShortID="611423438">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_metal_solid_run_05" ID="{D4AFFF8D-2101-4C30-AD63-13C6B8133BD7}">
+															<Language>SFX</Language>
+															<AudioFile>fst_metal_solid_run_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="682582010"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_metal_solid_run_05" ID="{D4AFFF8D-2101-4C30-AD63-13C6B8133BD7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_metal_solid_run_01" ID="{15649C21-16D5-4708-B86D-140D09EBFABC}" ShortID="146751374">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_metal_solid_run_01" ID="{D9F4503C-384D-4C3C-BB0C-ECFB485E000B}">
+															<Language>SFX</Language>
+															<AudioFile>fst_metal_solid_run_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1037344928"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_metal_solid_run_01" ID="{D9F4503C-384D-4C3C-BB0C-ECFB485E000B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_metal_solid_run_04" ID="{1F9AD8A0-C095-49B7-B32D-F6D271329EEB}" ShortID="662439594">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_metal_solid_run_04" ID="{AC2B3CBA-AC8F-4989-AB10-D34846F432B3}">
+															<Language>SFX</Language>
+															<AudioFile>fst_metal_solid_run_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="447909880"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_metal_solid_run_04" ID="{AC2B3CBA-AC8F-4989-AB10-D34846F432B3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_metal_solid_run_02" ID="{064D5DCF-A1F1-4AAD-ACB8-4ABE6070DEB0}" ShortID="459884478">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_metal_solid_run_02" ID="{BA7DE965-F1F7-4237-9115-0BF677BF8F83}">
+															<Language>SFX</Language>
+															<AudioFile>fst_metal_solid_run_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="956710958"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_metal_solid_run_02" ID="{BA7DE965-F1F7-4237-9115-0BF677BF8F83}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_metal_solid_run_03" ID="{8F6DCE61-10E9-4C6E-AA76-10E3B162874E}" ShortID="616153794">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_metal_solid_run_03" ID="{C0280C80-4156-48B9-BCB4-884E6FD1833B}">
+															<Language>SFX</Language>
+															<AudioFile>fst_metal_solid_run_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="364920853"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_metal_solid_run_03" ID="{C0280C80-4156-48B9-BCB4-884E6FD1833B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="wood" ID="{96E959FC-3BB1-4926-8D55-58E63A1033BD}" ShortID="947006277">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="fst_wood_run_02" ID="{02F7778A-61A9-4E66-9915-8AFFC31E93DA}" ShortID="4421729">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_wood_run_02" ID="{CBD082FB-5713-47CC-BD36-A3665C505508}">
+															<Language>SFX</Language>
+															<AudioFile>fst_wood_run_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="717750213"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_wood_run_02" ID="{CBD082FB-5713-47CC-BD36-A3665C505508}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_wood_run_03" ID="{B3B0E779-1E70-488C-9AE5-44F7CBC09905}" ShortID="638817452">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_wood_run_03" ID="{417DD470-0CE4-4E51-A1E8-D23DBB2B22FE}">
+															<Language>SFX</Language>
+															<AudioFile>fst_wood_run_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="599205026"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_wood_run_03" ID="{417DD470-0CE4-4E51-A1E8-D23DBB2B22FE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="fst_wood_run_01" ID="{A8B12494-3FEF-494D-A0B1-A405B77C8A2D}" ShortID="277914962">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Default Attenuation" ID="{1C16C885-97A9-48B9-99CA-62239B098C14}" WorkUnitID="{E9A01ADD-D16C-4AEF-92DB-DCF89FC42AD2}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{140D52C2-62AC-4006-AE21-98F493D2358C}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92A1A0F3-7047-4165-95AE-D5CFCC30AE61}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="fst_wood_run_01" ID="{789E06AC-5666-4799-872E-85A75E30D8F9}">
+															<Language>SFX</Language>
+															<AudioFile>fst_wood_run_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="517386198"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="fst_wood_run_01" ID="{789E06AC-5666-4799-872E-85A75E30D8F9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="snow" ID="{554AD103-7709-4B87-BA16-1812483DFFA9}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="stone" ID="{DA55E90B-A651-4C72-BB11-15AF1D83CAB4}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="metal" ID="{9AF28225-595D-4C57-A788-74BF6E5A3D87}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="water" ID="{8F92B0B8-F486-4A45-8034-6EAE2165F2EE}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="dirt" ID="{B9E4ACF8-503A-4F6E-8CAD-5D36E9D52FD2}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="wood" ID="{96E959FC-3BB1-4926-8D55-58E63A1033BD}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="wood" ID="{292F7A11-1B08-45A2-A39F-50D3DA75D76F}"/>
+												<ItemList>
+													<ItemRef Name="wood" ID="{96E959FC-3BB1-4926-8D55-58E63A1033BD}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="snow" ID="{8C528417-7F18-4881-9431-2C18DE9518FD}"/>
+												<ItemList>
+													<ItemRef Name="snow" ID="{554AD103-7709-4B87-BA16-1812483DFFA9}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="water_shallow" ID="{C4244129-C2BB-4111-9842-E035A8939F6C}"/>
+												<ItemList>
+													<ItemRef Name="water" ID="{8F92B0B8-F486-4A45-8034-6EAE2165F2EE}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="dirt" ID="{2A76B686-E4C9-4D02-8703-37C2C86035FA}"/>
+												<ItemList>
+													<ItemRef Name="dirt" ID="{B9E4ACF8-503A-4F6E-8CAD-5D36E9D52FD2}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="stone" ID="{34026AD5-7356-47ED-80D9-0306D5404EC8}"/>
+												<ItemList>
+													<ItemRef Name="stone" ID="{DA55E90B-A651-4C72-BB11-15AF1D83CAB4}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="metal" ID="{4446F0D7-1343-4C63-ABD3-1A881D917FA4}"/>
+												<ItemList>
+													<ItemRef Name="metal" ID="{9AF28225-595D-4C57-A788-74BF6E5A3D87}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
