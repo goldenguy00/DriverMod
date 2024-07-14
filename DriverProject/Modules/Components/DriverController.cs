@@ -770,7 +770,8 @@ namespace RobDriver.Modules.Components
 
         private void TryUnlock()
         {
-            if (this.weaponDef.nameToken != this.defaultWeaponDef.nameToken && this.characterBody)
+            if (this.characterBody && this.characterBody.isPlayerControlled && this.characterBody.isLocalPlayer
+                && this.weaponDef != this.arsenal.DefaultWeapon)
             {
                 var statSheet = PlayerStatsComponent.FindBodyStatsComponent(this.characterBody);
                 var unlockable = UnlockableCatalog.GetUnlockableDef(this.weaponDef.nameToken);
