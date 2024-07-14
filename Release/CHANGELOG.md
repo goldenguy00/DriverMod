@@ -1,5 +1,8 @@
 ## Changelog
 
+`1.7.4`
+- Fixed some weapons not getting unlocked when picked up
+
 `1.7.3`
 - Networked pistol shoot SFX (how has it been broken this whole time)
 

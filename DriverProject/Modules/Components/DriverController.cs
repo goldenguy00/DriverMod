@@ -10,6 +10,7 @@ using RoR2.Stats;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
@@ -381,20 +382,22 @@ namespace RobDriver.Modules.Components
             }
         }
 
+        [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
         private bool IsItemGoldenGun(ItemIndex itemIndex)
         {
             var goldenGun = LostInTransit.LITContent.Items.GoldenGun;
 
-            if (goldenGun is null) return false;
+            if (goldenGun == null) return false;
             return goldenGun.itemIndex == itemIndex;
         }
 
         // electric boogaloo
+        [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.NoOptimization)]
         private bool IsItemGoldenGun2(ItemIndex itemIndex)
         {
             var goldenGun = ClassicItemsReturns.Items.GoldenGun.Instance;
 
-            if (goldenGun?.ItemDef is null) return false;
+            if (goldenGun?.ItemDef == null) return false;
             return goldenGun.ItemDef.itemIndex == itemIndex;
         }
 
